@@ -72,5 +72,5 @@ The script above should generate a plot like:
 
 
 <p align="center">
-  <img src="/docs/Images/similarity.png">
+  <img src="/docs/Images/similarity.png width="500" height="350"">
 </p>
