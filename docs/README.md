@@ -10,12 +10,10 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 
 <p align="center">
   <img src="/docs/Images/data.png" width="250" height="300">
-  <em> Number of unique ads and vendor accounts per market </em>
 </p>
 
+# Setup
+This repository is tested on Python 3.8+. First, you should install a virtual environment:
 
-# Documentation
-Detailed documentation on the dataset and how to reproduce the main experimental results can be found here.
-
-
-
+python3 -m venv .venv/bsard
+source .venv/bsard/bin/activate
