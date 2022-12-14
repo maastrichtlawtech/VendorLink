@@ -8,7 +8,7 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 3) [Silk Road marketplace, 2012-13](http://dx.doi.org/10.23721/116/1406256) : Silk Road-1 was the first modern online black market notoriously known for selling illegal drugs. The website was first launched in February 2011, with a limited number of new seller accounts available. Later, new sellers acquired other accounts in an auction for a fixed fee. Finally, on October 2013, the FBI seized the website and arrested Ross Ulbricht for being the site's pseudonymous founder, "Dread Pirate Roberts." The non-anonymous Silk Road-1 dataset from Carnegie Mellon University has 1,065,810 listings by 2,872 vendors between 2012-13.
 4) [Agora marketplace, 2014-15](https://www.kaggle.com/datasets/philipjames11/dark-net-marketplace-drug-data-agora-20142015) : Agora was operated on the Tor network between 2013-15. After the demise of Evolution and Silk Road 2.0, Agora became the largest marketplace in March 2015. The Kaggle data parse contains drugs, weapons, books, and services. Duplicate listings have been removed, and prices have been averaged for duplicates. The data is in a CSV file and has over 100,000 unique listings.
 
-![Dataset](Images/data.png| width=10)
+![Dataset](docs/Images/data.png| width=10)
 Number of unique ads and vendor accounts per market
 
 # Documentation
