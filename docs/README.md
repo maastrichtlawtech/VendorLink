@@ -14,6 +14,7 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 
 # Setup
 This repository is tested on Python 3.8+. First, you should install a virtual environment:
-
-python3 -m venv .venv/bsard
-source .venv/bsard/bin/activate
+```
+python3 -m venv .venv/dw
+source .venv/dw/bin/activate
+```
