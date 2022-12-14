@@ -85,5 +85,5 @@ In this research, we demonstrate that by applying knowledge transfer from the tr
 To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings, run 
                                                                   
 ```
-python vendor-verification/transfer_BiGRU.py --data_to_train valhalla-berlusconi --bert_layer weighted-sum-last-four --load_model ../models/bert/pretrained_bert_classifier.model --setting low
+python vendor-verification/transfer_BiGRU.py --data_to_train valhalla-berlusconi --load_model ../models/bert/pretrained_bert_classifier.model
 ```
