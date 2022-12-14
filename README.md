@@ -4,9 +4,10 @@ The anonymity on the Darknet allows vendors to stay undetected by using multiple
 # Dataset
 For reproducibility purposes, we conduct our analyses on publically available Darknet advertisements datasets from Alphabay, Dreams, Traderoute, Valhalla, and Berlusconi non-anonymous markets. All the datasets are hosted by IMPACT cyber trust portal and Kaggle. They can be downloaded through the links below:
 
-1) [Alphabay marketplace, 2017-18]([https://github.com/user/repo/blob/branch/other_file.md])
-2) [Dream, Traderoute, Berlusconi and Valhalla marketplaces, 2017-2018]([http://dx.doi.org/10.23721/116/1503879]) 
-3) [Traveling the Silk Road, 2012-13]([http://dx.doi.org/10.23721/116/1406256])
+1) [Alphabay marketplace, 2017-18](https://github.com/user/repo/blob/branch/other_file.md)
+2) [Dream, Traderoute, Berlusconi and Valhalla marketplaces, 2017-2018](http://dx.doi.org/10.23721/116/1503879) 
+3) [Silk Road marketplace, 2012-13](http://dx.doi.org/10.23721/116/1406256)
+4) [Agora marketplace](https://www.kaggle.com/datasets/philipjames11/dark-net-marketplace-drug-data-agora-20142015)
 
 
 
