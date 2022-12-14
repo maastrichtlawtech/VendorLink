@@ -5,7 +5,4 @@ The anonymity on the Darknet allows vendors to stay undetected by using multiple
 (i) __Closed-Set Vendor Verification Task:__ A supervised-pretraining task that performs classification in a closed-set environment setting to verify unique vendor migrants across known markets (ii) __Open-set Vendor Identification Task:__ A text-similarity task in open-set environment setting that utilizes embeddings from the pre-trained classifier to verify known vendors and identify potential-aliases (iii) __Low-resource domain adaptation task:__ A knowledge-transfer task to adapt new domain knowledge and verify migrants in a closed-set environment setting across low-resource emerging markets.
 
 # Documentation
-Detailed documentation on the dataset and how to reproduce the main experimental results can be found [here](https://github.com/vageeshSaxena/VendorLink/blob/main/docs/README.md).
-
-
-
+Detailed documentation on the dataset and how to reproduce the main experimental results can be found [here](/docs/README.md).
