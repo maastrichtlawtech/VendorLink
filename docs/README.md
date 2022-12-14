@@ -28,5 +28,11 @@ Additionally, you should also consider installing the pre-trained English [fastT
 
 # Experiments
 
-#### Closed-Set Vendor Verification Task
+Prior to running experiments, let us first merge the required features from different input files and bring them together. By running the command below, we filter out all the unnecessary features from the item and feedback files and merge them to create preprocessed_alpha.csv, preprocessed_dreams.csv, preprocessed_silk.csv, and preprocessed_agora.csv files in the data directory. For all our upcoming experiments, we load these files as input to our scripts.
 
+```
+python3 utilities/formatData.py
+```
+
+#### Closed-Set Vendor Verification Task
+In this research, we first establish a benchmark on the vendor verification task using a BERT-based-cased classifier on the Alphabay-Dreams-Silk Road dataset. Compared to other baselines (please refer to them), the BERT-based-cased classifier outperforms by a reasonable margin. 
