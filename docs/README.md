@@ -24,5 +24,9 @@ Then, you can install all dependencies:
 pip install -r requirements.txt
 ```
 
-Additionally, you should install spaCy's [en_core_web_sm](https://spacy.io/models/en) pipeline (needed for text processing) and pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings.
+Additionally, you should also consider installing the pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings if you would like to initialize the BiGRU classifier baseline with Fasttext embeddings. Although, the experiments show that our BiGRU classifier after being initialized with the pre-trained embeddings of benchmark classifer outperforms the one with Fasttext embeddings by drastic margin.
+
+# Experiments
+
+#### Closed-Set Vendor Verification Task
 
