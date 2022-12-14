@@ -10,9 +10,11 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 
 
 
-<figure class="image" align="center">
+<figure class="image">
+  <center>
   <img src="/docs/Images/data.png" width="250" height="300">
   <figcaption>Number of unique ads and vendor accounts per market</figcaption>
+  </center>
 </figure>
 
 
