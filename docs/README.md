@@ -46,7 +46,7 @@ In this research, we first establish a benchmark by performing the vendor verifi
 In order to train the BERT-cased classifier, run:
 
 ```
-python vendor-verification/contextualized_models.py --model bert --save_dir ../models/
+python vendor-verification/contextualized_models.py --model bert --save_dir ../models/ --intent benchmark
 ```
 
 ### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
