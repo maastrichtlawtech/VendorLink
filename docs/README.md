@@ -18,3 +18,11 @@ This repository is tested on Python 3.8+. First, you should install a virtual en
 python3 -m venv .venv/dw
 source .venv/dw/bin/activate
 ```
+
+Then, you can install all dependencies:
+```
+pip install -r requirements.txt
+```
+
+Additionally, you should install spaCy's en_core_web_sm pipeline (needed for text processing) and pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings.
+
