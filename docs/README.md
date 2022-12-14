@@ -9,7 +9,7 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 4) [Agora marketplace, 2014-15](https://www.kaggle.com/datasets/philipjames11/dark-net-marketplace-drug-data-agora-20142015) : Agora was operated on the Tor network between 2013-15. After the demise of Evolution and Silk Road 2.0, Agora became the largest marketplace in March 2015. The Kaggle data parse contains drugs, weapons, books, and services. Duplicate listings have been removed, and prices have been averaged for duplicates. The data is in a CSV file and has over 100,000 unique listings.
 
 <p align="center">
-  <img src="/docs/Images/data.png" width="225" height="260">
+  <img src="Images/data.png" width="225" height="260">
 </p>
 
 # Setup
@@ -40,7 +40,7 @@ In this research, we first establish a benchmark by performing the vendor verifi
 
 
 <p align="center">
-  <img src="/docs/Images/baselines.png" width="305" height="355">
+  <img src="Images/baselines.png" width="305" height="355">
 </p>
 
 In order to train the BERT-cased classifier, run:
@@ -72,14 +72,14 @@ The script above should generate a plot with parent vendors on x-axis with their
 
 
 <p align="center">
-  <img src="/docs/Images/similarity.png" width="500" height="350">
+  <img src="Images/similarity.png" width="500" height="350">
 </p>
 
 ### Low-resource domain adaptation task: Utilizing knowledge-transfer to adapt to new domain knowledge and performing vendor verification on the emerging LR dataset.
 In this research, we demonstrate that by applying knowledge transfer from the trained BERT-cased classifier to a 2-layered BiGRU, our trained model adapts new domain knowledge and outperforms (refer to the table below) all the established baseline in this research for an emerging LR, Valhalla-Berlusconi dataset. 
 
 <p align="center">
-  <img src="/docs/Images/lr_exp.png" width="290" height="325">
+  <img src="Images/lr_exp.png" width="290" height="325">
 </p>
                                                                   
 To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings, run 
