@@ -12,7 +12,7 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 
 <figure class="image">
   <img src="/docs/Images/data.png" width="250" height="300" align="center">
-  <figcaption>{{Number of unique ads and vendor accounts per market}}</figcaption>
+  <figcaption>Number of unique ads and vendor accounts per market</figcaption>
 </figure>
 
 
