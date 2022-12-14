@@ -35,7 +35,7 @@ Before running experiments, let us merge the required features from different in
 python utilities/formatData.py
 ```
 
-#### Closed-Set Vendor Verification Task : Verifying / Classifying migrating vendors across markets
+### Closed-Set Vendor Verification Task : Verifying / Classifying migrating vendors across markets
 In this research, we first establish a benchmark by performing the vendor verification task using a BERT-based-cased classifier on the Alphabay-Dreams-Silk Road dataset. Compared to other baselines (please refer to them), the BERT-based-cased classifier outperforms (refer to the table below) by a reasonable margin. 
 
 
@@ -49,7 +49,7 @@ In order to train the BERT-cased classifier, run:
 python vendor-verification/contextualized_models.py --model bert --save_dir ../models/
 ```
 
-#### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
+### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
 In order to compute the similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save them in a pickled file. To extract the sentence representations from the trained model, run: 
 
 ```
@@ -74,3 +74,5 @@ The script above should generate a plot with parent vendors on x-axis with their
 <p align="center">
   <img src="/docs/Images/similarity.png" width="500" height="350"">
 </p>
+
+### Low-resource domain adaptation task: Performing knowledge-transfer to adapt to new domain knowledge and perform vendor verification on the emerging LR dataset.
