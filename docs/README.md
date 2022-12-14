@@ -39,7 +39,7 @@ In this research, we first establish a benchmark by performing the vendor verifi
 
 
 <p align="center">
-  <img src="/docs/Images/baselines.png" width="315" height="375">
+  <img src="/docs/Images/baselines.png" width="305" height="355">
 </p>
 
 In order to train the BERT-cased benchmark, run:
