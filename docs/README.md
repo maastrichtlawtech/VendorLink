@@ -15,8 +15,8 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 # Setup
 This repository is tested on Python 3.8+. First, you should install a virtual environment:
 ```
-python3 -m venv .venv/dw
-source .venv/dw/bin/activate
+python3 -m venv .venv/DW
+source .venv/DW/bin/activate
 ```
 
 Then, you can install all dependencies:
@@ -24,11 +24,12 @@ Then, you can install all dependencies:
 pip install -r requirements.txt
 ```
 
-Additionally, you should also consider installing the pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings if you would like to initialize the BiGRU classifier baseline with Fasttext embeddings. Although, the experiments show that our BiGRU classifier after being initialized with the pre-trained embeddings of benchmark classifer outperforms the one with Fasttext embeddings by drastic margin.
+Please consider installing the pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings if you would like to initialize the BiGRU classifier baseline with Fasttext embeddings. Although, our experiments show that the BiGRU classifier, initialized with the embeddings of the trained BERT-cased classifier, outperforms the one with Fasttext embeddings by a drastic margin.
+
 
 # Experiments
 
-Prior to running experiments, let us first merge the required features from different input files and bring them together. By running the command below, we filter out all the unnecessary features from the item and feedback files and merge them to create preprocessed_alpha.csv, preprocessed_dreams.csv, preprocessed_silk.csv, and preprocessed_agora.csv files in the data directory. For all our upcoming experiments, we load these files as input to our scripts.
+Before running experiments, let us merge the required features from different input files and bring them together. By running the command below, we filter out all the unnecessary features from the item and feedback files and merge them to create preprocessed_alpha.csv, preprocessed_dreams.csv, preprocessed_silk.csv, and preprocessed_agora.csv files in the data directory. Then, we load these files for all our future experiments as input to our scripts.
 
 ```
 python3 utilities/formatData.py
@@ -49,14 +50,27 @@ python3 vendor-verification/contextualized_models.py --model bert --save_dir ../
 ```
 
 #### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
-In order to compute similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save it in a pickled file. To extract the sentence representations from the trained model, run: 
+In order to compute the similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save them in a pickled file. To extract the sentence representations from the trained model, run: 
 
 ```
 python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
 ```
 
-Then to compute similarity between the advertisements of vendors, run (Make sure to set vendor_list parameter in compute_similarity_between_vendors function to None to compute similarity in the advertisements of all the vendors):
+Then, to compute the similarity between the vendor advertisements, run (Make sure to set vendor_list parameter in compute_similarity_between_vendors function to None to compute similarity in the advertisements of all the vendors):
 
 ```
 python3 vendor-identification/compute_similarity.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
 ```
+
+Finally, to visualize the vendor and their potential aliases, run:
+
+```
+python3 vendor-identification/plot_vendor_similarity.py --n_vendors 3 --plot_dir ../plots/
+```
+
+The script above should generate a plot like:
+
+
+<p align="center">
+  <img src="/docs/Images/similarity.png">
+</p>
