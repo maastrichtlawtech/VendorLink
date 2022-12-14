@@ -53,7 +53,7 @@ python vendor-verification/contextualized_models.py --model bert --save_dir ../m
 In order to compute the similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save them in a pickled file. To extract the sentence representations from the trained model, run: 
 
 ```
-python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
+python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model --layer weighted-sum-last-four
 ```
 
 Then, to compute the similarity between the vendor advertisements, run (Make sure to set vendor_list parameter in compute_similarity_between_vendors function to None to compute similarity in the advertisements of all the vendors):
@@ -72,7 +72,18 @@ The script above should generate a plot with parent vendors on x-axis with their
 
 
 <p align="center">
-  <img src="/docs/Images/similarity.png" width="500" height="350"">
+  <img src="/docs/Images/similarity.png" width="500" height="350">
 </p>
 
-### Low-resource domain adaptation task: Performing knowledge-transfer to adapt to new domain knowledge and perform vendor verification on the emerging LR dataset.
+### Low-resource domain adaptation task: Utilizing knowledge-transfer to adapt to new domain knowledge and performing vendor verification on the emerging LR dataset.
+In this research, we demonstrate that by applying knowledge transfer from the trained BERT-cased classifier to a 2-layered BiGRU, our trained model adapts new domain knowledge and outperforms (refer to the table below) all the established baseline in this research for an emerging LR, Valhalla-Berlusconi dataset. 
+
+<p align="center">
+  <img src="/docs/Images/lr_exp.png" width="305" height="355">
+</p>
+                                                                  
+To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings, run 
+                                                                  
+```
+python vendor-verification/transfer_BiGRU.py --data_to_train valhalla-berlusconi --bert_layer weighted-sum-last-four --load_model ../models/bert/pretrained_bert_classifier.model --setting low
+```
