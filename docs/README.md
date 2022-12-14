@@ -24,5 +24,5 @@ Then, you can install all dependencies:
 pip install -r requirements.txt
 ```
 
-Additionally, you should install spaCy's en_core_web_sm pipeline (needed for text processing) and pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings.
+Additionally, you should install spaCy's [en_core_web_sm](https://spacy.io/models/en) pipeline (needed for text processing) and pre-trained English [fastText](https://fasttext.cc/docs/en/crawl-vectors.html#models) embeddings.
 
