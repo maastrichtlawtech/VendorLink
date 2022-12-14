@@ -34,17 +34,19 @@ Prior to running experiments, let us first merge the required features from diff
 python3 utilities/formatData.py
 ```
 
-#### Closed-Set Vendor Verification Task
-In this research, we first establish a benchmark on the vendor verification task using a BERT-based-cased classifier on the Alphabay-Dreams-Silk Road dataset. Compared to other baselines (please refer to them), the BERT-based-cased classifier outperforms (refer to the table below) by a reasonable margin. 
+#### Closed-Set Vendor Verification Task : Verifying / Classifying migrating vendors across markets
+In this research, we first establish a benchmark by performing the vendor verification task using a BERT-based-cased classifier on the Alphabay-Dreams-Silk Road dataset. Compared to other baselines (please refer to them), the BERT-based-cased classifier outperforms (refer to the table below) by a reasonable margin. 
 
 
 <p align="center">
-  <img src="/docs/Images/baselines.png" width="300" height="375">
+  <img src="/docs/Images/baselines.png" width="315" height="375">
 </p>
 
 In order to train the BERT-cased benchmark, run:
 
 ```
-python3 vendor-verification/contextualized_models.py --model bert
+python3 vendor-verification/contextualized_models.py --model bert --save_dir ../models/
 ```
+
+#### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
 
