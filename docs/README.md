@@ -42,11 +42,21 @@ In this research, we first establish a benchmark by performing the vendor verifi
   <img src="/docs/Images/baselines.png" width="305" height="355">
 </p>
 
-In order to train the BERT-cased benchmark, run:
+In order to train the BERT-cased classifier, run:
 
 ```
 python3 vendor-verification/contextualized_models.py --model bert --save_dir ../models/
 ```
 
 #### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
+In order to compute similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save it in a pickled file. To extract the sentence representations from the trained model, run: 
 
+```
+python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
+```
+
+Then to compute similarity between the advertisements of vendors, run (Make sure to set vendor_list parameter in compute_similarity_between_vendors function to None to compute similarity in the advertisements of all the vendors):
+
+```
+python3 vendor-identification/compute_similarity.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
+```
