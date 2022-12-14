@@ -9,7 +9,7 @@ For reproducibility purposes, we conduct our analyses on publically available Da
 4) [Agora marketplace, 2014-15](https://www.kaggle.com/datasets/philipjames11/dark-net-marketplace-drug-data-agora-20142015) : Agora was operated on the Tor network between 2013-15. After the demise of Evolution and Silk Road 2.0, Agora became the largest marketplace in March 2015. The Kaggle data parse contains drugs, weapons, books, and services. Duplicate listings have been removed, and prices have been averaged for duplicates. The data is in a CSV file and has over 100,000 unique listings.
 
 <p align="center">
-  <img src="/docs/Images/data.png" width="275" height="300">
+  <img src="/docs/Images/data.png" width="275" height="350">
 </p>
 
 # Setup
