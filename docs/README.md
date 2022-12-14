@@ -32,7 +32,7 @@ Please consider installing the pre-trained English [fastText](https://fasttext.c
 Before running experiments, let us merge the required features from different input files and bring them together. By running the command below, we filter out all the unnecessary features from the item and feedback files and merge them to create preprocessed_alpha.csv, preprocessed_dreams.csv, preprocessed_silk.csv, and preprocessed_agora.csv files in the data directory. Then, we load these files for all our future experiments as input to our scripts.
 
 ```
-python3 utilities/formatData.py
+python utilities/formatData.py
 ```
 
 #### Closed-Set Vendor Verification Task : Verifying / Classifying migrating vendors across markets
@@ -46,7 +46,7 @@ In this research, we first establish a benchmark by performing the vendor verifi
 In order to train the BERT-cased classifier, run:
 
 ```
-python3 vendor-verification/contextualized_models.py --model bert --save_dir ../models/
+python vendor-verification/contextualized_models.py --model bert --save_dir ../models/
 ```
 
 #### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
@@ -59,16 +59,16 @@ python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../m
 Then, to compute the similarity between the vendor advertisements, run (Make sure to set vendor_list parameter in compute_similarity_between_vendors function to None to compute similarity in the advertisements of all the vendors):
 
 ```
-python3 vendor-identification/compute_similarity.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
+python vendor-identification/compute_similarity.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model
 ```
 
 Finally, to visualize the vendor and their potential aliases, run:
 
 ```
-python3 vendor-identification/plot_vendor_similarity.py --n_vendors 3 --plot_dir ../plots/
+python vendor-identification/plot_vendor_similarity.py --n_vendors 3 --plot_dir ../plots/
 ```
 
-The script above should generate a plot like:
+The script above should generate a plot with parent vendors on x-axis with their potential aliases (scatter markers) and advertisement similarity on y-axis. The color coding indicates the existence of plotted vendors on Alphabay (red and triangle-up-open-dot), Dreams (green and circle-open-dot), and Silk Road (blue and star-open-dot) markets.
 
 
 <p align="center">
