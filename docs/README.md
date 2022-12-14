@@ -79,7 +79,7 @@ The script above should generate a plot with parent vendors on x-axis with their
 In this research, we demonstrate that by applying knowledge transfer from the trained BERT-cased classifier to a 2-layered BiGRU, our trained model adapts new domain knowledge and outperforms (refer to the table below) all the established baseline in this research for an emerging LR, Valhalla-Berlusconi dataset. 
 
 <p align="center">
-  <img src="/docs/Images/lr_exp.png" width="300" height="375">
+  <img src="/docs/Images/lr_exp.png" width="275" height="375">
 </p>
                                                                   
 To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings, run 
