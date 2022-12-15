@@ -55,7 +55,7 @@ python vendor-verification/contextualized_models.py --model bert --save_dir ../m
 ```
 
 ### Open-Set Vendor Identification Task : Computing text similarity to verify existing migrants and identify potential aliases
-In order to compute the similarity between vendor advertisements, we first extract sentence representations from the above-trained classifier and save them in a pickled file. To extract the sentence representations from the trained model, run: 
+In order to compute the similarity between vendor advertisements, we first extract style representations from the above-trained classifier and save them in a pickled file. To extract the style representations from the trained model, run: 
 
 ```
 python3 vendor-identification/generate_vendorRepresentations.py --model_dir ../models/bert  --pickle_dir ../pickled/ --load_model pretrained_bert_classifier.model --layer weighted-sum-last-four
