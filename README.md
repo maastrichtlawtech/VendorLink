@@ -94,3 +94,4 @@ To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings
 python vendor-verification/transfer_BiGRU.py --data_to_train valhalla-berlusconi --load_model ../models/bert/pretrained_bert_classifier.model
 ```
 
+# Bibtex Reference (Will be updated after ACL, 2023)
