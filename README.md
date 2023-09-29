@@ -1,10 +1,9 @@
-# VendorLink: A (Semi-)Supervised NLP approach for Identifying & Linking Vendor Migrants & Aliases on Darknet Markets [(paper)](https://arxiv.org/abs/2305.02763)
+# VendorLink: A (Semi-)Supervised NLP approach for Identifying & Linking Vendor Migrants & Aliases on Darknet Markets
 
 The anonymity on the Darknet allows vendors to stay undetected by using multiple vendor aliases or frequently migrating between markets. Consequently, illegal markets and their connections are challenging to uncover on the Darknet. To identify relationships between illegal markets and their vendors, we propose VendorLink, an NLP-based approach that examines writing patterns to verify, identify, and link unique vendor accounts across text advertisements (ads) on seven public Darknet markets. In contrast to existing literature, VendorLink utilizes the strength of supervised pre-training to perform closed-set vendor verification, open-set vendor identification, and low-resource domain adaption tasks. Altogether, our approach can help Law Enforcement Agencies (LEA) make more informed decisions by verifying and identifying migrating vendors and their potential aliases with state-of-the-art (SOTA) performance on both existing and emerging low-resource (LR) Darknet markets.
 
 ![(i) Closed-Set Vendor Verification Task: A supervised-pretraining task that performs classification in a closed-set environment setting to verify unique vendor migrants across known markets (ii) Open-set Vendor Identification Task: A text-similarity task in open-set environment setting that utilizes embeddings from the pre-trained classifier to verify known vendors and identify potential-aliases (iii) Low-resource domain adaptation task: A knowledge-transfer task to adapt new domain knowledge and verify migrants in a closed-set environment setting across low-resource emerging markets.](docs/Images/vendorLink.png)
 (i) __Closed-Set Vendor Verification Task:__ A supervised-pretraining task that performs classification in a closed-set environment setting to verify unique vendor migrants across known markets (ii) __Open-set Vendor Identification Task:__ A text-similarity task in open-set environment setting that utilizes embeddings from the pre-trained classifier to verify known vendors and identify potential-aliases (iii) __Low-resource domain adaptation task:__ A knowledge-transfer task to adapt new domain knowledge and verify migrants in a closed-set environment setting across low-resource emerging markets.
-
 
 # Dataset
 For reproducibility purposes, we conduct our analyses on publically available Darknet advertisement datasets from Agora, Alphabay, Dreams, Traderoute, Valhalla, and Berlusconi non-anonymous markets. All the datasets are hosted by IMPACT cyber trust portal and Kaggle. They can be downloaded through the links below:
@@ -94,4 +93,22 @@ To train our BiGRU classifier initialized with pre-trained BERT-cased embeddings
 python vendor-verification/transfer_BiGRU.py --data_to_train valhalla-berlusconi --load_model ../models/bert/pretrained_bert_classifier.model
 ```
 
-# Bibtex Reference (Will be updated after ACL, 2023)
+# Citation
+
+```bibtex
+@inproceedings{saxena-etal-2023-vendorlink,
+    title = "{V}endor{L}ink: An {NLP} approach for Identifying {\&} Linking Vendor Migrants {\&} Potential Aliases on {D}arknet Markets",
+    author = "Saxena, Vageesh  and
+      Rethmeier, Nils  and
+      van Dijck, Gijs  and
+      Spanakis, Gerasimos",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.481",
+    doi = "10.18653/v1/2023.acl-long.481",
+    pages = "8619--8639",
+}
+```
